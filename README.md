@@ -1,1 +1,1 @@
-personal-blog
+Based on Jekull theme - https://github.com/daattali/beautiful-jekyll
