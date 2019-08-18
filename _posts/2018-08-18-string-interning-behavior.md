@@ -6,8 +6,6 @@ tags: [development]
 comments: true
 ---
 
-## What is string interning
-
 According to Eric Lippert [article](https://blogs.msdn.microsoft.com/ericlippert/2009/09/28/string-interning-and-string-empty/) on MSDN "If you have two identical string literals in one compilation unit then the code we generate ensures that only one string object is created by the CLR for all instances of that literal within the assembly. This optimization is called string interning." So basically if you have two identical string literals in your code only one string will be created.
 
 Here are some examples of how string interning works in different cases:
