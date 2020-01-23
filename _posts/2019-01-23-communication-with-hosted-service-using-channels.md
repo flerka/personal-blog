@@ -2,7 +2,7 @@
 layout: post
 title: Communication With Hosted Service using Channels
 subtitle: 
-tags: [development][.net core]
+tags: [development]
 comments: true
 ---
 
