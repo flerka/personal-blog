@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Communication With Hosted Service using Channels
+title: Communication With Hosted Service using Channels in .Net Core
 subtitle: 
 tags: [development]
 comments: true
