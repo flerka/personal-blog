@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Work with Time Zones on different OS .Net Core
+title: Work with Time Zones on different OS with .Net Core
 subtitle: 
 tags: [development]
 comments: true
