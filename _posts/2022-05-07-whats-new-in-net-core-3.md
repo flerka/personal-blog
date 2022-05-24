@@ -2,7 +2,7 @@
 layout: post
 title: Looking Back - What Happened In .Net Core 3.0
 subtitle: 
-tags: [development],[C#],[dotnet]
+tags: [development, csharp, dotnet]
 comments: true
 ---
 
