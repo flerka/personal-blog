@@ -49,6 +49,7 @@ local-tools added. They work only on folder level and rely on dotnet-tools.json 
 - added support of ARM64 on Linux
 - System.Net.Http.HttpClient now supports Http/2
 
+
 ## What to read
 
 These article based on links listed below. To understand topic better you should definitely read them too:
