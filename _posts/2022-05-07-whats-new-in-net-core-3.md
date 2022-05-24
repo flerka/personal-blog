@@ -10,7 +10,7 @@ I decided to write article series about .Net Core 3.0 and further versions. This
 
 ### Support for Windows desktop applications
 
-In .Net Core 3 was added support for WPF and WinForms application. Also .NET Core Windows Forms applications now support high DPI mode.
+ .Net Core 3 have added support for WPF and WinForms application. Also .NET Core Windows Forms applications now support high DPI mode.
 
 ### New build-in JSON serializer
 
