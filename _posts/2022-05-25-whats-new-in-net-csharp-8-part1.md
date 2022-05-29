@@ -6,7 +6,7 @@ tags: [development, csharp, dotnet]
 comments: true
 ---
 
-I decided to write article series about .Net Core 3.0 and further versions. This is part of the series about C# 8.
+I decided to write article series about .Net Core 3.0 and further versions. This is the first part of the series about C# 8.
 
 C# 8 was introduced in .Net Core 3 and it is supported in .NET Standard 2.1.
 
