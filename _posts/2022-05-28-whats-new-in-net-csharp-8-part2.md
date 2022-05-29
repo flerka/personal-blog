@@ -12,7 +12,7 @@ I decided to write article series about .Net Core 3.0 and further versions. This
 In C# 8 was added new assignment operator - `??=`. In the example below default user will be assigned only if user variable is `null`.
 
 ```csharp
-var result = user ??= defaultUser;
+user ??= defaultUser;
 ````
 
 Null-coalescing assignment operator is similar to `??`, which returns the value of its left operand if it is not null; otherwise, evaluates the right operand and returns its result.
