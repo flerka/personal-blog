@@ -58,7 +58,7 @@ In C# 8 was added new interface `IAsyncDisposable` for asynchronous disposal of 
 - added support of default interface methods. You can now add default implementation to the interface members. This will be especially useful for library authors.
 
 ## What is next
-In the next and the last part 3 I revise two major C# 8 updates - indices/ranges and nullable reference types. I decide to dedicate whole article to this two topics.
+In the next and the last part 3 I revise two major C# 8 updates - indices/ranges and nullable reference types. I decided to dedicate whole article to this two topics.
 
 ## What to read
 - https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8
