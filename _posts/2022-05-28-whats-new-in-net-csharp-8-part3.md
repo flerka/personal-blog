@@ -9,7 +9,7 @@ comments: true
 In the third part of the series about C# 8, I will look at nullable reference types and indexes/ranges features.
 
 ## Nullable references types
-Why is this important? Before C# 8 and .Net 3.0, all reference types (such as classes or records) were considered nullable by default by the compiler. However, in more recent languages such as Swift or Kotlin, all reference types are not-nullable by default. Null reference types are also called "billion-dollar mistake" by its inventor Tony Hoare according to [Wikipedia[(https://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions).
+Why is this important? Before C# 8 and .Net 3.0, all reference types (such as classes or records) were considered nullable by default by the compiler. However, in more recent languages such as Swift or Kotlin, all reference types are not-nullable by default. Null reference types are also called "billion-dollar mistake" by its inventor Tony Hoare according to [Wikipedia](https://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions).
 
 What problem do nullable reference types solve? First, it forces you as a developer to think about a situation when an object is not presented, for example, in the API response.
 
