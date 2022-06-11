@@ -2,17 +2,22 @@
 layout: post
 title: Looking Back - What Happened In C# 8 Part 1
 subtitle: 
-tags: [development, csharp, dotnet]
+tags: [development, csharp, dotnet,csharp8-series]
 comments: true
 ---
 
-I decided to write article series about .Net Core 3.0 and further versions. This is the first part of the series about C# 8.
+I decided to write article series about .Net Core 3.0. It is the first part of the subseries about C# 8.
 
-C# 8 was introduced in .Net Core 3 and it is supported in .NET Standard 2.1.
+All articles in the [series](https://flerka.github.io/personal-blog/tags/#csharp8-series)
+- [part 1](https://flerka.github.io/personal-blog/2022-05-25-whats-new-in-net-csharp-8-part1/)
+- [part 2](https://flerka.github.io/personal-blog/2022-05-28-whats-new-in-net-csharp-8-part2/)
+- [part 3](https://flerka.github.io/personal-blog/2022-05-28-whats-new-in-net-csharp-8-part3/)
+
+C# 8 was introduced in .Net Core 3 and supported by .NET Standard 2.1.
 
 ## Readonly structure members
 
-Starting from the C# you can declare not only structures as readonly but structure members too. For example:
+Starting from the C#, you can declare structures as readonly and structure members too. For example:
 
 ```csharp
 public readonly double Mul()
@@ -21,7 +26,7 @@ public readonly double Mul()
 }
 ```
 
-In this case you cannot change structure members or you will see compile-time error. For example:
+In this case, you cannot change structure members, or you will see the compile-time error. For example:
 
 ```csharp
         public readonly int Mul()
@@ -31,12 +36,12 @@ In this case you cannot change structure members or you will see compile-time er
         }
 ```
 
-After compilation of code above you will see such error message:
+After compilation of the code above, you will see such error message:
 ***Error CS1604 Cannot assign to 'X' because it is read-only***
 
 What you should remember about readonly structure members:
 
-- you can use readonly with override keyword
+- you can use readonly with the override keyword
 - if you call non-readonly member  inside readonly one defensive copy will be created with compile warning:
 
 ***Warning CS8656 Call to non-readonly member from a 'readonly' member results in an implicit copy of 'this'.***
@@ -74,7 +79,7 @@ using (var connection = new SqlConnection(conString))
 
 ## Static local functions
 
-Local functions was introduced in C# 7. From my point of view, static keyword for local functions is very useful. It allows you to avoid accidental closure. Closure in local function can lead to non-intuitive memory allocation. You can find more information about this in this article - https://weblogs.asp.net/dixin/functional-csharp-local-function-and-closure. I found this article very useful and really well-written.
+Local functions were introduced in C# 7. From my point of view, static keyword for local functions is beneficial. It allows you to avoid accidental closure. Closure in local function can lead to non-intuitive memory allocation. You can find more information about this in this article - https://weblogs.asp.net/dixin/functional-csharp-local-function-and-closure. I found this article very useful and well-written.
 
 ## What to read
 - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct#readonly-instance-members

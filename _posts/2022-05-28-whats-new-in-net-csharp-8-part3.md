@@ -2,11 +2,16 @@
 layout: post
 title: Looking Back - What Happened In C# 8 Part 3
 subtitle: 
-tags: [development, csharp, dotnet]
+tags: [development, csharp, dotnet,csharp8-series]
 comments: true
 ---
 
 In the third part of the series about C# 8, I will look at nullable reference types and indexes/ranges features.
+
+All articles in the series:
+- [part 1](https://flerka.github.io/personal-blog/2022-05-25-whats-new-in-net-csharp-8-part1/)
+- [part 2](https://flerka.github.io/personal-blog/2022-05-28-whats-new-in-net-csharp-8-part2/)
+- [part 3](https://flerka.github.io/personal-blog/2022-05-28-whats-new-in-net-csharp-8-part3/)
 
 ## Nullable references types
 Why is this important? Before C# 8 and .Net 3.0, all reference types (such as classes or records) were considered nullable by default by the compiler. However, in more recent languages such as Swift or Kotlin, all reference types are not-nullable by default. Null reference types are also called "billion-dollar mistake" by its inventor Tony Hoare according to [Wikipedia](https://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions).
