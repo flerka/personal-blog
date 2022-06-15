@@ -5,7 +5,7 @@ subtitle:
 tags: [development, dotnet]
 comments: true
 ---
-There is a lot of confusion around Microsoft naming sometimes. So in this short post, I want to discuss the difference between CIL, MSIL, and IL.
+There can be confusion around Microsoft naming sometimes. So in this short post, I want to discuss the difference between CIL, MSIL, and IL.
 
 ![Difference between CIL, MSIL, and IL.](../assets/msil-il-cil.jpg)
 
