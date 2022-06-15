@@ -44,7 +44,7 @@ You can select the dotnet publish option that will create a single file executab
 
 ## Other updates in .Net Core 3
 
-- tiered compilation is now on by default
+- [tiered compilation](https://flerka.github.io/personal-blog/2022-06-11-tiered-compilation-in-dotnet/) is now on by default
 - macOS executable setting is turned off by default right now
 - dotnet build now copies dependencies from NuGet cache to the output folder (before, only dotnet publish did that)
 - .Net Core provides more accurate information about the environment (such as Runtime\Framework versions)

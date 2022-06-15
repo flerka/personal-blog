@@ -17,15 +17,14 @@ First, let us decrypt acronyms:
 - IL is Intermediate Language
 - MSIL is Microsoft Intermediate Language
 
-What is the difference between CIL, IL, and MSIL? According to this article, it's the same thing. ("Intermediate Language is sometimes also called Common Intermediate Language (CIL) or Microsoft Intermediate Language (MSIL).")[https://docs.microsoft.com/en-us/dotnet/standard/managed-code].
+What is the difference between CIL, IL, and MSIL? According to [this](https://docs.microsoft.com/en-us/dotnet/standard/managed-code) article, it's the same thing, - "Intermediate Language is sometimes also called Common Intermediate Language (CIL) or Microsoft Intermediate Language (MSIL)".
 
 You can think that may be one of them is outdated, but all are three used in Microsoft documentation right now:
-- (IL 1341 results)[https://docs.microsoft.com/en-us/search/?terms=il]
-- (MSIL 822 results)[https://docs.microsoft.com/en-us/search/?terms=msil]
-- (CIL 171 results)[https://docs.microsoft.com/en-us/search/?terms=cil]
+- ["IL" - 1341 results](https://docs.microsoft.com/en-us/search/?terms=il)
+- ["MSIL" - 822 results](https://docs.microsoft.com/en-us/search/?terms=msil)
+- ["CIL" - 171 results](https://docs.microsoft.com/en-us/search/?terms=cil)
 
-
-What is IL\CIL\MSIL? It's the result of managed code compilation. The CIL is platform and processor independent, and it is up to the CLR to JIT the CIL code into native code specific to the hardware platform and processor. The CIL and CLR make up the Common Language Infrastructure (CLI). 
+What is IL\CIL\MSIL? It's the result of managed code compilation. The CIL is platform and processor independent, and it is up to the CLR to JIT the IL\CIL\MSIL code into native code specific to the hardware. The CIL and CLR make up the CLI (Common Language Infrastructure). 
 
 ## What to read
 - https://github.com/microsoft/CLRInstrumentationEngine/wiki/FAQ
