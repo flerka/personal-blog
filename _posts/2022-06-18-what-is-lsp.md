@@ -5,7 +5,7 @@ subtitle:
 tags: [development, dotnet, dotnet-community]
 comments: true
 ---
-Because of [all](https://github.com/omnisharp/omnisharp-vscode/issues/5276) [events](https://isdotnetopen.com/) in .Net Community around LSP and open source, I decided to write an article about LSP and why it is important.
+Because of [all](https://github.com/omnisharp/omnisharp-vscode/issues/5276) [events](https://isdotnetopen.com/) in .NET Community around LSP and open source, I decided to write an article about LSP and why it is important.
 
 Language Server Protocol allows development tools to communicate with code analyzers in a standardized way. It helps to reuse code base through different development tools that support LSP: Visual Studio Code, Atom, Emacs, etc. Language Server should implement the Language Server Protocol to make this work.
 
