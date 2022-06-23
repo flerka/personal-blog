@@ -72,16 +72,8 @@ My sample projects compilation strategies:
 This instruction works for June 22, 2022:
 - download and install [Visual Studio 2022 preview](https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes-preview), including Desktop development with C++ component.
 - download and install [.NET 7.0 Preview sdk](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
-- create a sample application. Run in console:
-```
-dotnet new console 
-```
-- add `PublishAot` property to your project file
-```
-    <PropertyGroup>
-        <PublishAot>true</PublishAot>
-    </PropertyGroup>
-```
+- create a sample application. Run in console `dotnet new console `.
+- add `PublishAot` property to your project file `<PublishAot>true</PublishAot>`.
 
 ### Sample applications measurements
 Because one of the most significant advantage of ahead-of-time compilation is quicker app start, I decided to measure the application run from start to end. I didn't find how to measure this with BenchmarkDotNet, so I decided to try bash tools. I tried `time` and `strace -c,` but both of them didn't give the expected precision. As a result, with the help of [SuddenGunter](https://github.com/SuddenGunter/) and [stackoverflow](https://stackoverflow.com/a/63635704), we created a small bash script that measures execution time. You can find it on Github.
