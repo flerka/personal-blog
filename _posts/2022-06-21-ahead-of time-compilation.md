@@ -27,7 +27,7 @@ JIT executes on the end-user/server machine, and AOT usually (ngen.exe is an exc
 ![Difference between AOT and JIT compilation.](../assets/aot-vs-jit.png)
 
 ### When you can benefit from AOT
-- it helps to improve startup performance.
+- it helps to improve startup performance. 
 - it can [produces libraries](https://github.com/dotnet/samples/blob/main/core/nativeaot/NativeLibrary/README.md) that can be consumed by programs written in programming languages that don't use CLR.
 - it can be used on the platform where JIT, for some reason, is not allowed. For example, [Xamarin.iOS uses ahead-of-time compilation](https://docs.microsoft.com/en-us/xamarin/ios/internals/architecture#aot) because of security restrictions iOS has. Apple doesn't allow the execution of dynamically generated code on iOS.
 
@@ -43,7 +43,7 @@ JIT executes on the end-user/server machine, and AOT usually (ngen.exe is an exc
 - [IL2CPU](https://github.com/CosmosOS/IL2CPU) - it's used in Cosmos project.
 
 ## Native AOT
-The dotnet team presented Native AOT as a part of the .NET 7 preview. Before that, it was part of the .NET Runtime Lab. 
+The dotnet team presented Native AOT as a part of the .NET 7 preview. Before that, it was part of the .NET Runtime Lab. It's main goal to improve performance for applications, where JIT doesn't needed.
 
 How does Native AOT work, and what is the difference between __Native AOT__ and __ReadyToRun__? Right now, ReadyToRun assemblies have native code with native data structures + IL code. Such an approach - when you have both native, and IL code allows to execute Tiered Compilation and perform optimizations in runtime. Native AOT in opposite produces only native artifacts. It does not have IL code and can't be recompiled in any way with Tiered Compilation.
 
