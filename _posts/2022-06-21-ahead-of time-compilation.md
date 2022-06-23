@@ -102,7 +102,7 @@ Comparison of execution time. In my [sample applications](https://github.com/fle
 | Default settings - R2R off + QuickJIT on | 0.07557441812 |
 | Default + QuickJIT off | 0.074214229 |
 
-Comparison of execution files. 
+Comparison of executable files. 
 
 | Compilation type | Exe size in KB| 
 |-------|--------|
