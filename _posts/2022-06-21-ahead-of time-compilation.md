@@ -83,8 +83,6 @@ dotnet new console
     </PropertyGroup>
 ```
 
-In my [sample applications](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code. 
-
 ### Sample applications measurements
 Because one of the most significant advantage of ahead-of-time compilation is quicker app start, I decided to measure the application run from start to end. I didn't find how to measure this with BenchmarkDotNet, so I decided to try bash tools. I tried `time` and `strace -c,` but both of them didn't give the expected precision. As a result, with the help of [SuddenGunter](https://github.com/SuddenGunter/) and [stackoverflow](https://stackoverflow.com/a/63635704), we created a small bash script that measures execution time. You can find it on Github.
 
@@ -94,6 +92,8 @@ for run in {1..1000}; do (./measure-execution ./aot-samples.exe.exe >/dev/null) 
 ```
 All applications were published with `dotnet publish -c Release`
 
+Comparison of execution time. In my [sample applications](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code and it executes pretty quick. 
+
 | Compilation type | Exeсution avg in seconds| 
 |-------|--------|
 | Native AOT | 0.0512868349 |
@@ -101,6 +101,8 @@ All applications were published with `dotnet publish -c Release`
 | R2R + Quick JIT for loops | 0.07483450931 |
 | Default settings - R2R off + QuickJIT on | 0.07557441812 |
 | Default + QuickJIT off | 0.074214229 |
+
+Comparison of execution files. 
 
 | Compilation type | Exe size in KB| 
 |-------|--------|
