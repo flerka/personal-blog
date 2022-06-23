@@ -38,7 +38,7 @@ JIT executes on the end-user/server machine, and AOT usually (ngen.exe is an exc
 - [crossgen2 tool](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-1/#crossgen2) - can generate assemblies in ReadyToRun format. It is the second version of the crossgen tool that the .NET team rewrote in C#. Crossgen2 has added features, such as [version bubbles](https://github.com/dotnet/runtime/blob/main/docs/design/features/crossgen2-compilation-structure-enhancements.md). The crossgen2 architecture uses a graph that allows performing different analysis and optimizations. There is great [article](https://devblogs.microsoft.com/dotnet/conversation-about-crossgen2/) that discusses crossgen2.
 - [ngen.exe](https://docs.microsoft.com/en-us/dotnet/framework/tools/ngen-exe-native-image-generator) - for .Net framework. It runs on the target machine and produces executables that are not self-contained and requires an installed runtime. Can cause some [performance issues](https://devblogs.microsoft.com/dotnet/wondering-why-mscorsvw-exe-has-high-cpu-usage-you-can-speed-it-up/) on target PC.
 - [CoreRT](https://github.com/dotnet/corert) - .NET Core runtime optimized for ahead-of-time compilation. Right now, this project has been replaced by Native AOT. It could use not only JIT compiler but experimental projects, like IL to CPP. It generated one file containing the app itself, its dependencies, and CoreRT runtime. If you want to know more, you can read a great [post](https://mattwarren.org/2018/06/07/CoreRT-.NET-Runtime-for-AOT/) from Matt Warren that has everything nicely written and illustrated. 
-- [.Net Native](https://docs.microsoft.com/en-us/windows/uwp/dotnet-native/) - as far as I know, it's for UWP only.
+- [.NET Native](https://docs.microsoft.com/en-us/windows/uwp/dotnet-native/) - as far as I know, it's for UWP only.
 - [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html) - it compiles IL assemblies to native code, not open source, and for Unity only.
 - [IL2CPU](https://github.com/CosmosOS/IL2CPU) - it's used in Cosmos project.
 
@@ -81,7 +81,7 @@ Because one of the most significant advantage of ahead-of-time compilation is qu
 
 To measure the average time, I ran my [sample program](https://github.com/flerka/aot-samples) 1000 times on Windows x64 pc.
 ```
-for run in {1..1000}; do (./measure-execution ./aot-samples.exe.exe >/dev/null) &>> result.txt; done
+for run in {1..1000}; do (./measure-execution ./aot-samples.exe >/dev/null) &>> result.txt; done
 ```
 All applications were published with `dotnet publish -c Release`
 
@@ -104,6 +104,8 @@ Comparison of executable files.
 | R2R + Quick JIT for loops | 64 580 |
 | Default settings - R2R off + QuickJIT on | 64 567 |
 | Default + QQuickJIT off | 64 567 |
+
+As we can see on my PC Native AOT shows quicker execution time and is more than ten times smaller compared to ReadyToRun or regular self-contained assembly.
 
 ## What to read
 - https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md
