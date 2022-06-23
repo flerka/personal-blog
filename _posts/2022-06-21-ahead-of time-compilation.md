@@ -49,6 +49,7 @@ How does Native AOT work, and what is the difference between __Native AOT__ and 
 
 When Native AOT should be handy:
 - in apps where size matters, Native AOT assemblies are smaller than ReadyToRun.
+- for short-lived cloud applications, such as Azure Functions, where you pay for execution time.
 - short-lived scalable applications where Tiered Compilation won't kick in.
 
 Cons of Native AOT:
@@ -73,18 +74,18 @@ This instruction works for June 22, 2022:
 - download and install [Visual Studio 2022 preview](https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes-preview), including Desktop development with C++ component.
 - download and install [.NET 7.0 Preview sdk](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 - create a sample application. Run in console `dotnet new console `.
-- add `PublishAot` property to your project file `<PublishAot>true</PublishAot>`.
+- add PublishAot property to your project file `<PublishAot>true</PublishAot>`.
 
 ### Sample applications measurements
-Because one of the most significant advantage of ahead-of-time compilation is quicker app start, I decided to measure the application run from start to end. I didn't find how to measure this with BenchmarkDotNet, so I decided to try bash tools. I tried `time` and `strace -c,` but both of them didn't give the expected precision. As a result, with the help of [SuddenGunter](https://github.com/SuddenGunter/) and [stackoverflow](https://stackoverflow.com/a/63635704), we created a small bash script that measures execution time. You can find it on Github.
+Because one of the most significant advantage of ahead-of-time compilation is quicker app start, I decided to measure the application run from start to end. I didn't find how to measure this with BenchmarkDotNet, so I decided to try bash tools. I tried `time` and `strace -c,` but both of them didn't give the expected precision. As a result, with the help of [SuddenGunter](https://github.com/SuddenGunter/) and [stackoverflow](https://stackoverflow.com/a/63635704), we created a small bash script that measures execution time. You can find it on [my Github](https://github.com/flerka/aot-samples/blob/main/measure-execution).
 
-To measure the average time, I ran my sample program 1000 times on Windows x64 pc.
+To measure the average time, I ran my [sample program](https://github.com/flerka/aot-samples) 1000 times on Windows x64 pc.
 ```
 for run in {1..1000}; do (./measure-execution ./aot-samples.exe.exe >/dev/null) &>> result.txt; done
 ```
 All applications were published with `dotnet publish -c Release`
 
-Comparison of execution time. In my [sample applications](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code and it executes pretty quick. 
+Comparison of execution time. In my [samples](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code and it executes pretty quick. 
 
 | Compilation type | Exeсution avg in seconds| 
 |-------|--------|
