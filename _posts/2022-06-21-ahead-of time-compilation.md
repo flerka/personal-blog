@@ -111,4 +111,4 @@ Comparison of executable files.
 - https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md
 
 
-__*I want to thank you to [Artem Kolomytsev](https://github.com/SuddenGunter/) for the review and proofreading of this post.*__
+__*I want to thank [Artem Kolomytsev](https://github.com/SuddenGunter/) for the review and proofreading of this post.*__
