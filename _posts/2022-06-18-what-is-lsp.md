@@ -15,6 +15,8 @@ Language Server lives in a separate process, and the development tool can commun
 ## Hands-on Language Server 
 I want to try to write my language server with VS Code extension as client in the next post. 
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 - https://microsoft.github.io/language-server-protocol/
 - https://docs.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol

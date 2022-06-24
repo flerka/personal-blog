@@ -65,6 +65,8 @@ In C# 8 was added new interface, `IAsyncDisposable` for asynchronous disposal of
 ## What is next
 In the next and the last part three, I will revise two major C# 8 updates - indices/ranges and nullable reference types. So I decided to dedicate the whole article to these two topics.
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 - https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8
 - https://docs.microsoft.com/en-us/dotnet/api/system.iasyncdisposable

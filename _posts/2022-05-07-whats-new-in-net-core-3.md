@@ -53,10 +53,8 @@ You can select the dotnet publish option that will create a single file executab
 - added support of ARM64 on Linux
 - System.Net.Http.HttpClient now supports Http/2
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
 
 ## What to read
-
-This article is based on the links listed below. To understand the topic better you should read them too:
-
 - https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 - https://andrewlock.net/series/exploring-asp-net-core-3/ Andrew Lock wrote a fantastic (as always) series that deep dives into .Net Core 3.0. You definitely should look into it.

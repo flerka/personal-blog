@@ -107,10 +107,12 @@ Comparison of executable files.
 
 As we can see on my PC Native AOT shows quicker execution time and is more than ten times smaller compared to ReadyToRun or regular self-contained assembly.
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 - https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md
 - https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot
 - https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md
 
 
-__*I want to thank [Artem Kolomytsev](https://github.com/SuddenGunter/) for the review and proofreading of this post.*__
+*I want to thank [Artem Kolomytsev](https://github.com/SuddenGunter/) for the review and proofreading of this post.*

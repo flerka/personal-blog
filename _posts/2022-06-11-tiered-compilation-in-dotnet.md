@@ -24,6 +24,8 @@ If you really want to go to internals you can check:
 - [code versioning](https://github.com/dotnet/runtime/blob/main/docs/design/features/code-versioning.md) feature overview and [code](https://github.com/dotnet/runtime/blob/main/src/coreclr/vm/codeversion.cpp)
 - [tiered compilation](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md) feature overview and [code](https://github.com/dotnet/runtime/blob/main/src/coreclr/vm/tieredcompilation.cpp)
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 - https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/
 - https://docs.microsoft.com/en-us/dotnet/standard/managed-execution-process

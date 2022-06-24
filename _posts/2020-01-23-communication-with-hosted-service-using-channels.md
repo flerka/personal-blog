@@ -76,6 +76,8 @@ internal static IServiceCollection AddChannel(this IServiceCollection services)
 }
 ```
  
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+ 
 ## What to read
 
 To understand the topic better, I strongly recommend reading these two articles. They will help to understand hosted services and channels better.

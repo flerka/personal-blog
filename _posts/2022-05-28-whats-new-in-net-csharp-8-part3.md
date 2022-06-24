@@ -91,6 +91,8 @@ Range type can be used similar to the Index type - with variable declaration and
         }
 ```
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references
 https://docs.microsoft.com/en-us/dotnet/csharp/nullable-migration-strategies

@@ -81,6 +81,8 @@ using (var connection = new SqlConnection(conString))
 
 Local functions were introduced in C# 7. From my point of view, static keyword for local functions is beneficial. It allows you to avoid accidental closure. Closure in local function can lead to non-intuitive memory allocation. You can find more information about this in this article - https://weblogs.asp.net/dixin/functional-csharp-local-function-and-closure. I found this article very useful and well-written.
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct#readonly-instance-members
 - https://weblogs.asp.net/dixin/functional-csharp-local-function-and-closure
