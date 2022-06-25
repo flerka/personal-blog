@@ -124,6 +124,8 @@ True
 
 What happens in this case? Method Intern is searching for a string in string pool and adding the new one if it does not find and returns it with reference. In our case string "hello" was already in string pool because of string literal _hello_ on line 1. When can it be useful? When you want to optimize memory usage in your application.
 
+__*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
+
 ## What to read
 
 I strongly recommend reading Eric Lippert's article on MSDN to understand the topic better. It is almost ten years old now, but it's still worth reading as it helps deeply understand the pros and cons of string interning in compile-time and runtime.
