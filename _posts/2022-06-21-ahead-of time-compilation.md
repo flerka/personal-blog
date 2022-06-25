@@ -91,13 +91,13 @@ All applications were published with `dotnet publish -c Release`
 
 Comparison of execution time. In my [samples](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code, and it executes pretty quick. 
 
-| Compilation type | Exeсution avg in seconds| 
+| Compilation type | Exeсution avg in ms | 
 |-------|--------|
-| Native AOT | 0.0512868349 |
-| R2R | 0.07488370891 |
-| R2R + Quick JIT for loops | 0.07483450931 |
-| Default settings - R2R off + QuickJIT on | 0.07557441812 |
-| Default + QuickJIT off | 0.074214229 |
+| Native AOT | 51.2868349 |
+| R2R | 74.88370891 |
+| R2R + Quick JIT for loops | 74.83450931 |
+| Default settings - R2R off + QuickJIT on | 75.57441812 |
+| Default + QuickJIT off | 74.214229 |
 
 Comparison of executable files. 
 
@@ -118,11 +118,11 @@ My AWS Lambda sample projects publishing strategies:
 - Native AOT .NET 7 Preview on *provided.al2* Amazon runtime
 - self-contained ReadyToRun .NET 7 Preview on *provided.al2* Amazon runtime.
 - self-contained .NET 7 Preview project with default compilation settings - ReadyToRun is off, and QuickJIT is on *provided.al2* Amazon runtime.
-- not self-contained ReadyToRun .NET 6 on *dotnet6* Amazon runtime.
-- not self-contained .NET 6 project with default compilation settings - ReadyToRun is off, and QuickJIT is on *dotnet6* Amazon runtime.
+- ReadyToRun .NET 6 on *dotnet6* Amazon runtime.
+- .NET 6 project with default compilation settings - ReadyToRun is off, and QuickJIT is on *dotnet6* Amazon runtime.
 
 ### Setup .NET 7 and create a sample AWS Lambda on Amazon Linux 2 in WSL
-As you remember, Native AOT doesn't support cross-compilation, and AWS doesn't have a Windows ru for Lambdas. 
+As you remember, Native AOT doesn't support cross-compilation, and AWS doesn't have a Windows runtime for Lambdas. 
 
 My first approach was to set up .NET 7 on my regular development environment on Ubuntu and deploy Lambda from there, but as a result, I got a .NET runtime error after deployment. So in my second approach, I decided to avoid cross-compilation and set up .NET 7 and Amazon development environment on Amazon Linux 2 in WSL.
 
@@ -152,7 +152,7 @@ I deployed functions with `dotnet lambda deploy-function --function-name FUNCTIO
 
 *Don't forget to delete your Lambda from AWS after test with `dotnet lambda delete-function --function-name LAMBDA_NAME`.*
 
-To understand results better, you need to know the difference between Lambda's cold and warm start. Therefore, I advise you to read this [series](https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/) from AWS.
+To understand results better, you need to know the difference between Lambda's cold and warm start. Therefore, I advise you to read this [series](https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/) from Amazon.
 
 | Compilation type | First run in ms (init duration is not included) | Second run in ms | Third run in ms |
 |-------|--------|--------|--------|
@@ -162,12 +162,12 @@ To understand results better, you need to know the difference between Lambda's c
 | Regular .NET 6 on dotnet6 | 353.86 | 36.30 | 1.00 |
 | Regular .NET 7 on provided.al2 | 446.86 | 9.23 | 1.21 |
 
-As you can see, Native AOT shows better numbers for the hot and cold start. ReadyToRun in dotnet runtime also shows better numbers for the cold start than regular projects and self-contained R2R. 
+As you can see, Native AOT shows better numbers for the warm and cold start. ReadyToRun in dotnet runtime also shows better numbers for the cold start than regular projects and self-contained R2R. 
 
 __*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
 
 ## What to read
-- https://github.com/awslabs/dotnet-nativeaot-labs - you can check this project repository for Native AOT cloud samples
+- https://github.com/awslabs/dotnet-nativeaot-labs - you can check this project repository for Native AOT cloud samples and to get more information about Native AOT in cloud
 - https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md
 - https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot
 - https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md
