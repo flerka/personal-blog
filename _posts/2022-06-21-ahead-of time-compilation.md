@@ -167,10 +167,10 @@ As you can see, Native AOT shows better numbers for the warm and cold start. Rea
 __*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), where I post interesting .NET-related stuff and tech news.*__
 
 ## What to read
-- https://github.com/awslabs/dotnet-nativeaot-labs - you can check this project repository for Native AOT cloud samples and to get more information about Native AOT in cloud
-- https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md
-- https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot
-- https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md
+- [https://github.com/awslabs/dotnet-nativeaot-labs](https://github.com/awslabs/dotnet-nativeaot-labs) - you can check this project repository for Native AOT cloud samples and to get more information about Native AOT in cloud
+- [https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md](https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md)
+- [https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot](https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot)
+- [https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md)
 
 
 *I want to thank [Artem Kolomytsev](https://github.com/SuddenGunter/) for the review and proofreading of this post.*
