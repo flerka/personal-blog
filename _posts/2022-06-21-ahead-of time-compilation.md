@@ -40,7 +40,7 @@ JIT executes on the end-user/server machine, and AOT usually (ngen.exe is an exc
 - [crossgen tool](https://github.com/dotnet/runtime/blob/main/docs/workflow/building/coreclr/crossgen.md) - later it was replaced with crossgen2.
 - [crossgen2 tool](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-1/#crossgen2) - can generate assemblies in ReadyToRun format. It is the second version of the crossgen tool that the .NET team rewrote in C#. Crossgen2 has added features, such as [version bubbles](https://github.com/dotnet/runtime/blob/main/docs/design/features/crossgen2-compilation-structure-enhancements.md). The crossgen2 architecture uses a graph that allows performing different analysis and optimizations. There is great [article](https://devblogs.microsoft.com/dotnet/conversation-about-crossgen2/) that discusses crossgen2.
 - [ngen.exe](https://docs.microsoft.com/en-us/dotnet/framework/tools/ngen-exe-native-image-generator) - for .Net framework. It runs on the target machine and produces executables that are not self-contained and requires an installed runtime. Can cause some [performance issues](https://devblogs.microsoft.com/dotnet/wondering-why-mscorsvw-exe-has-high-cpu-usage-you-can-speed-it-up/) on target PC.
-- [CoreRT](https://github.com/dotnet/corert) - .NET Core runtime optimized for ahead-of-time compilation. Right now, this project has been replaced by Native AOT. It could use not only JIT compiler but experimental projects, like IL to CPP. It generated one file containing the app itself, its dependencies, and CoreRT runtime. If you want to know more, you can read a great [post](https://mattwarren.org/2018/06/07/CoreRT-.NET-Runtime-for-AOT/) from Matt Warren that has everything nicely written and illustrated. 
+- [CoreRT](https://github.com/dotnet/corert) - .NET Core runtime optimized for ahead-of-time compilation. Right now, this project has been replaced by Native AOT. It could use not only JIT compiler but experimental projects, like IL to CPP. It generates one file containing the app itself, its dependencies, and CoreRT runtime. If you want to know more, you can read a great [post](https://mattwarren.org/2018/06/07/CoreRT-.NET-Runtime-for-AOT/) from Matt Warren that has everything nicely written and illustrated. 
 - [.NET Native](https://docs.microsoft.com/en-us/windows/uwp/dotnet-native/) - as far as I know, it's for UWP only.
 - [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html) - it compiles IL assemblies to native code, not open source, and for Unity only.
 - [IL2CPU](https://github.com/CosmosOS/IL2CPU) - it's used in Cosmos project.
@@ -89,7 +89,7 @@ for run in {1..1000}; do (./measure-execution ./aot-samples.exe >/dev/null) &>> 
 ```
 All applications were published with `dotnet publish -c Release`
 
-Comparison of execution time. In my [samples](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code, and it executes pretty quick. 
+Comparison of execution time. In my [samples](https://github.com/flerka/aot-samples), I used my naive solution from Advent of code, and it executes pretty quickly. 
 
 | Compilation type | Exeсution avg in ms | 
 |-------|--------|
@@ -112,7 +112,7 @@ Comparison of executable files.
 As we can see on my PC, Native AOT shows quicker execution time on Windows and is more than ten times smaller compared to ReadyToRun or regular self-contained assembly.
 
 ## Let's try Native AOT in AWS Cloud
-Now let's create a sample [AWS Lambda](https://aws.amazon.com/lambda/) with Native AOT and .NET 7. I made several additional Lambdas to compare billed duration with them. You can find them all in separate folders in my [sample GitHub repository](https://github.com/flerka/aot-samples). Unfortunately, AWS doesn't have a runtime for .NET 7 preview, and I will use self-contained publishing for all projects on NET 7 other than Native AOT. For .NET 6 applications, I will use AWS runtime.
+Now let's create a sample [AWS Lambda](https://aws.amazon.com/lambda/) with Native AOT and .NET 7. I made several additional Lambdas to compare billed duration with them. You can find them all in separate folders in my [sample GitHub repository](https://github.com/flerka/aot-samples). Unfortunately, AWS doesn't have a runtime for .NET 7 preview, and I will use self-contained publishing for all projects on NET 7 other than Native AOT. For .NET 6 applications, I will use AWS dotnet runtime.
 
 My AWS Lambda sample projects publishing strategies: 
 - Native AOT .NET 7 Preview on *provided.al2* Amazon runtime
