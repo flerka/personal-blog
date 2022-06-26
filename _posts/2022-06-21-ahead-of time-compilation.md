@@ -168,6 +168,7 @@ __*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), wher
 
 ## What to read
 - [https://github.com/awslabs/dotnet-nativeaot-labs](https://github.com/awslabs/dotnet-nativeaot-labs) - you can check this project repository for Native AOT cloud samples and to get more information about Native AOT in cloud
+- [https://codevision.medium.com/](https://codevision.medium.com/) - in Andrey Kurdyumov blog on Medium, you can find a bunch of cool articles related to Native AOT
 - [https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md](https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/compiling.md)
 - [https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot](https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot)
 - [https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md)
