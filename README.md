@@ -1,1 +1,1 @@
-Based on Jekull theme - https://github.com/daattali/beautiful-jekyll
+Based on Beautiful Jekyll theme - https://github.com/daattali/beautiful-jekyll
