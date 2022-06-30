@@ -4,6 +4,7 @@ title: Native AOT and Ahead-of-Time Compilation in .NET
 subtitle: 
 tags: [development, dotnet]
 comments: true
+excerpt: This post was inspired by the latest news about Native AOT being the part of .NET 7. So I decided to summarize past and current state of ahead-of-time compilation in dotnet ecosystem.
 ---
 ## Table of Contents
 - [What is AOT](#what-is-aot)
