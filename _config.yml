@@ -1,8 +1,8 @@
 # --- General options --- #
 
 # Name of website
-title: Flerka personal blog
-
+title: Flerka's programming blog
+email: flerka@suddengunter.com
 # Short description of your site
 description: Programmer personal blog
 
@@ -57,6 +57,7 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Flerka
+  email: flerka@suddengunter.com
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
