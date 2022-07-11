@@ -43,7 +43,7 @@ To publish self-contained Windows x65 application you need to do:
 
 ## Important notes
 - if you want your application to be executable, it always is platform-specific. If you run `dotnet publish` without parameters and don't specify the target platform in the project file, your current platform will be the target.
-- to run framework-dependent dll on the target machine, run the command `dontet TARGETDLL_NAME` 
+- to run framework-dependent dll on the target machine, run the command `dotnet TARGETDLL_NAME` 
 - to specify the result platform, you need to add `-r <RID>` to your publish command
 - you can publish your self-contained application in [ready-to-run format](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-with-readytorun-images)
 - single-file deployment compatible with both self-contained and framework-dependent approaches
