@@ -175,4 +175,4 @@ __*You can subscribe to my [Telegram channel](https://t.me/dotnetarticles), wher
 - [https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md)
 
 
-*I want to thank [Artem Kolomytsev](https://github.com/SuddenGunter/) for the review and proofreading of this post.*
+*I want to thank [Artem Kolomytsev](https://github.com/SuddenGunter/) and [Alexey Novitskyi](https://www.linkedin.com/in/alexey-novitskyi-22877b42/) for the review and proofreading of this post.*
