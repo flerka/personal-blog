@@ -42,7 +42,7 @@ To publish a self-contained Windows x64 application, you need to do the followin
 - or this `dotnet publish -r win-x64` and `<SelfContained>true</SelfContained>` in project file
 
 ## Important notes
-- if you want your application to be executable, it always is platform-specific. For example, if you run `dotnet publish` without parameters and don't specify the target platform in the project file, your current platform will be the target.
+- if you want your application to be executable, you can only use platform-specific publishing. For example, if you run `dotnet publish` without parameters and don't specify the target platform in the project file, your current platform will be the target.
 - to run framework-dependent dll on the target machine, run the command `dotnet TARGETDLL_NAME` 
 - to specify the result platform, you need to add `-r <RID>` to your publish command
 - you can publish your self-contained application in [ready-to-run format](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-with-readytorun-images)
