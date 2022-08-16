@@ -12,7 +12,7 @@ In the case of self-contained publishing, your application will be shipped with 
 
 Pros of this approach:
 - your program becomes more portable
-- end-user don't need to have a specific .NET version installed
+- end-user doesn't need to have a specific .NET version installed
 - your code execution becomes more repeatable and reproducible especially compared to framework-dependent publishing and roll-forward feature turned on
 
 Cons of this approach:
@@ -36,13 +36,13 @@ Cons of this approach:
 .NET added a roll-forward feature that works with framework-dependent publishing. Roll forward is a somewhat smart version selection. This feature will affect what .NET version will be used for your application on the end-user machine. I strongly recommend checking [section about roll-forward](https://docs.microsoft.com/en-us/dotnet/core/versions/selection#framework-dependent-apps-roll-forward) as it is turned on by default. 
 
 ## How to make app self-contained
-To publish self-contained Windows x65 application you need to do:
+To publish a self-contained Windows x64 application, you need to do the following:
 - this `dotnet publish -r win-x64 --self-contained true`
 - or this `dotnet publish` and `<SelfContained>true</SelfContained>` and `<RuntimeIdentifier>win-x64</RuntimeIdentifier>` in project file
 - or this `dotnet publish -r win-x64` and `<SelfContained>true</SelfContained>` in project file
 
 ## Important notes
-- if you want your application to be executable, it always is platform-specific. If you run `dotnet publish` without parameters and don't specify the target platform in the project file, your current platform will be the target.
+- if you want your application to be executable, it always is platform-specific. For example, if you run `dotnet publish` without parameters and don't specify the target platform in the project file, your current platform will be the target.
 - to run framework-dependent dll on the target machine, run the command `dotnet TARGETDLL_NAME` 
 - to specify the result platform, you need to add `-r <RID>` to your publish command
 - you can publish your self-contained application in [ready-to-run format](https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-with-readytorun-images)
