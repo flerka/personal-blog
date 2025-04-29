@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Framework and Tools for LLM Fine-Tuning and Inference
+title:  Tools and libraries for LLM Fine-Tuning and Inference
 subtitle: 
 tags: [llm, machine-learning, fine-tuning, llm-inference]
 comments: true
